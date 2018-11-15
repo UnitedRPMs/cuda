@@ -4,3 +4,4 @@ RPMS/*
 SPECS/*
 SRPMS/*
 .directory
+cuda_*_linux
