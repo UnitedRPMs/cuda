@@ -16,7 +16,7 @@
 %global		cuda_data /opt/cuda/share
 %global		cuda_doc /opt/cuda/doc
 
-%bcond_without normalsource
+%bcond_with normalsource
 
 Name:           cuda
 Version:        10.0.130
@@ -509,6 +509,7 @@ sed -i -e 's|CUDA_VERSION|%{version}|g' \
   rm -fr "%{buildroot}/opt/cuda/samples/uninstall_cuda_samples"*.pl
   rm -fr "%{buildroot}/opt/cuda/bin/cuda-install-samples"*.sh
   rm -fr "%{buildroot}/opt/cuda/bin/uninstall_cuda_toolkit"*.pl
+  rm -fr %{_builddir}/%{name}-%{version}/*.run
 
 %pre
 # nothing
